@@ -1,3 +1,5 @@
+Check which time zone your biological clock is now at, by finding which time zone has reach 2200 hrs (so you need to sleep).
+
 Version change logs:
 
 v2.0 08 DEC 2024
