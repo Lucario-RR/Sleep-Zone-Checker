@@ -1,6 +1,10 @@
 # Configs
-sleep_time = 22
-probability = 0.2 # Lucky draw
+config = {
+    'sleep_time': 22,
+    'probability': 0.2, # Lucky draw
+    'debug': False
+}
+
 
 time_zones = {
     -12: ["美国贝克岛", "美国豪兰岛","新西兰奥克兰", "新西兰惠灵顿", "斐济"],

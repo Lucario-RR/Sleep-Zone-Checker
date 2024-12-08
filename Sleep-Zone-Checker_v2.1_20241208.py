@@ -1,6 +1,6 @@
 from datetime import datetime,timezone
 import random
-from config import sleep_time,probability,time_zones,time_zones_special
+from config import config,time_zones,time_zones_special
 
 
 def getCurrentHours():
@@ -12,7 +12,7 @@ def getCurrentHours():
 
 
 def getTimeZone():
-    zone = (sleep_time - getCurrentHours()) # Get target time zone
+    zone = (config['sleep_time'] - getCurrentHours()) # Get target time zone
     if zone > 12:
         zone -= 24
     # Find the closest value by calculating the minimum difference if zone not in dict
@@ -23,10 +23,11 @@ def getTimeZone():
 
 def luckyDraw():
     zone = getTimeZone()
-    # debug # print(f"[Debug]当前英国时间：{getCurrentHours()}，作息：{time_zones[zone]}")
+    if config['debug']:
+        debug # print(f"[Debug]当前英国时间：{getCurrentHours()}，作息：{time_zones[zone]}")
 
     # Perform lucky draw with prob set
-    if (random.random() < probability) and (zone in time_zones_special):
+    if (random.random() < config['probability']) and (zone in time_zones_special):
         return(f"这人一定是{random.choice(time_zones_special[zone])}！")
     else:
         return(f"这人一定是{random.choice(time_zones[zone])}人！")
