@@ -10,5 +10,5 @@ v2.0 08 DEC 2024
 5. Add a lucky draw to get hidden titles;
 
 v2.1 08 DEC 2024
-1. Separates congigs and logic code;
+1. Separates configs and logic code;
 2. Add "深✌️" to UTC+8;
